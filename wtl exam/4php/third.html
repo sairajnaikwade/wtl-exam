@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Records</title>
+</head>
+<body>
+  <h1>Student Records</h1>
+  <button onclick="fetchAll()">Load Students</button>
+  <div id="allRecords"></div>
+
+  <script>
+    function createTable(data) {
+      if (!data || data.length === 0) return "<p>No records found.</p>";
+      let table = "<table><thead><tr><th>Name</th><th>PRN</th></tr></thead><tbody>";
+      data.forEach(stu => {
+        table += `<tr>
+          <td>${stu.name}</td/>
+          <td>${stu.prn}</td>
+        </tr>`;
+      });
+      table += "</tbody></table>";
+      return table;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    async function fetchAll() {
+      let res = await fetch("http://localhost/TESTING/third.php");
+      let data = await res.json();
+      document.getElementById("allRecords").innerHTML = createTable(data);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; }
+
+/* Navbar */
+nav {
+  background: black;         
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+nav .logo { font-size: 20px; font-weight: bold; }
+nav ul { list-style: none; display: flex; }
+nav ul li { margin-left: 20px; }
+nav ul li a { color: white; text-decoration: none; }
+
+/* Hero Section */
+.hero {
+  background: gray;         
+  color: white;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+.hero p { margin-bottom: 15px; }
+.btn {
+  background: orange;        
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* About Section */
+.about {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Projects Section */
+.projects {
+  background: lightgray;     
+  padding: 40px 20px;
+  text-align: center;
+}
+.project-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.project {
+  background: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Contact Section */
+.contact {
+  padding: 40px 20px;
+  text-align: center;
+}
+.contact form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.contact input, .contact textarea {
+  margin: 10px 0;
+  padding: 10px;
+}
+.contact button {
+  background: green;         
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: black;          
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  nav ul { flex-direction: column; align-items: center; }
+  .hero h1 { font-size: 1.8rem; }
+  .project-list { flex-direction: column; }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+
+      Enter Name<input type="text" id="name" />
+      Enter Colour <input type="text" id="colour" />
+      <button id="btn" type="button">Submit</button>
+    </form>
+    <script>
+        async function sendData(){
+            const name = document.getElementById("name").value;
+            const colour = document.getElementById("colour").value;
+            const data = {
+                name1 : name,
+                colour1 : colour
+            }
+            const response =  await fetch("http://localhost/TESTNG/ind.php" , {
+                method:"POST",
+                headers:{
+                    'Content-Type':"application/json"
+                },
+                body:JSON.stringify(data)   
+            })
+
+            const responseData = await response.json();
+            console.log("Server :: " + response);
+        }
+      document.getElementById("btn").addEventListener("click", () => {
+        sendData();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background:  rgb(137, 182, 212);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    margin:  10px;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    border-bottom: 1px solid  RGB(204, 204, 204);
+}
+
+h2 {
+    color: RGB(52, 152, 219);
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+form button {
+    background: RGB(52, 152, 219);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: rgb(15, 133, 66);
+    color: white;
+    cursor: pointer;
+}
+
+footer {
+    background:  RGB(241, 241, 241);
+    text-align: center;
+    padding: 10px;
+}
+
