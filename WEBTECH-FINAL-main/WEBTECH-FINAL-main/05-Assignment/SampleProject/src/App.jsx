@@ -7,9 +7,9 @@ import Card from './components/card.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [name, setName] = useState('suraj')
+  const [name, setName] = useState('SS')
 
-  const surname = "Bagul"
+  const surname = "SD"
   let ncount =0;
 
   return (
