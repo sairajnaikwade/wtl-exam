@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo application</title>
+</head>
+<body>
+    
+    <div class="Container">
+        <div>Todo application</div>
+        <div class="Main-Content">
+            <input type="text" placeholder="Enter the task to add..." class="inputbox">
+            <button class="add-button">Add Task</button> 
+        </div>
+        <ul class="todolist">    </li>
+    </div>
+
+<script>
+    let inputBox = document.querySelector('.inputbox')
+    let addbtn = document.querySelector('button')
+    let listitem = document.querySelector('.todolist')
+
+    addbtn.addEventListener('click',function(){
+        let todotext = inputBox.value.trim()
+        
+        let listctnt = document.createElement('li');
+        listctnt.textContent = todotext;
+        
+        let delbtn=document.createElement('button')
+        delbtn.textContent= "Delete";
+        listctnt.appendChild(delbtn)
+        listitem.appendChild(listctnt);
+        delbtn.addEventListener('click',()=>{
+            listctnt.remove();
+        })
+        
+
+    })
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+1)navigate to C:\xampp\htdocs
+2)Create a project Folder
+3)Paste All the project files with php and HTML
+4)Launch XAMPP and start the apache server
+5)Navigate to the browser and search https://localhost:80/ProjectFolderName/Filename.php

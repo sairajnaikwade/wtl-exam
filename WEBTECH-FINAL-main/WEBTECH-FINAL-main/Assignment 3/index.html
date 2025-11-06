@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Fetch the data </button>
+
+    <ul class="mydata"></ul>
+
+
+    <script>
+let list=document.querySelector('.mydata')
+let btn= document.querySelector('button')
+btn.addEventListener('click',async function(){
+    let response =await fetch('data.json');
+    if(!response.ok){
+        console.log("error");
+    }
+    let data =await response.json();
+    console.log(data.age)
+
+
+    let h1ele=document.createElement('h1');
+    h1ele.textContent=`Name: ${data.name} Age: ${data.age} City: ${data.city}`;
+    list.appendChild(h1ele);
+    
+    
+
+
+})
+
+    </script>
+</body>
+</html>
